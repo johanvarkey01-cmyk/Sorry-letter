@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sorry Letter for Athulya</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #fbe8eb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .letter-container {
+            background: #fff0f6;
+            width: 90%;
+            max-width: 600px;
+            border: 2px solid #ffadad;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 105, 135, 0.3);
+            padding: 40px 30px 30px 30px;
+            text-align: center;
+            position: relative;
+        }
+        .letter-front {
+            cursor: pointer;
+        }
+        .letter-front h1 {
+            color: #ff5c8d;
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            user-select: none;
+        }
+        .open-letter-text {
+            color: #ff758f;
+            font-size: 1.2rem;
+            margin-top: 0;
+            user-select: none;
+        }
+        .letter-content {
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+        .sorry-message {
+            font-size: 1.5rem;
+            color: #d6336c;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .cute-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .cute-images img {
+            width: 130px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #ffa6b4;
+            transition: transform 0.3s ease;
+        }
+        .cute-images img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {opacity:0;}
+            to {opacity:1;}
+        }
+        .closing {
+            font-size: 1.2rem;
+            color: #b80d57;
+            margin-top: 25px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="letter-container">
+    <div class="letter-front" id="openLetter">
+        <h1>Dear Athulya,</h1>
+        <p class="open-letter-text">Click here to open your letter...</p>
+    </div>
+    <div class="letter-content" id="letterContent">
+        <p class="sorry-message">
+            I am truly sorry for my behavior. I never meant to hurt you. I promise to learn from my mistakes<br/>
+            and be better for you because you mean the world to me.
+        </p>
+
+        <div class="cute-images">
+            <img src="https://i.imgur.com/6k0d8yR.jpg" alt="Sorry kitten 1" title="Sorry for acting like that" />
+            <img src="https://i.imgur.com/QN8jR44.jpg" alt="Sorry kitten 2" title="I'm sorry" />
+            <img src="https://i.imgur.com/IGj1Yiq.jpg" alt="Puss in boots sorry" title="I suck, I'm sorry" />
+            <img src="https://i.imgur.com/OGQRLrK.jpg" alt="Sorry kitten 3" title="Sorryyyy" />
+        </div>
+
+        <p class="closing">
+            ♥ With all my heart, I love you, Athulya. ♥
+        </p>
+    </div>
+</div>
+
+<script>
+    const openLetterDiv = document.getElementById('openLetter');
+    const letterContentDiv = document.getElementById('letterContent');
+
+    openLetterDiv.addEventListener('click', () => {
+        openLetterDiv.style.display = 'none';
+        letterContentDiv.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
